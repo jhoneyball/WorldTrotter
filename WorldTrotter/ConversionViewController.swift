@@ -8,7 +8,7 @@
 
 import UIKit
 
-class conversionViewController: UIViewController {
+class conversionViewController: UIViewController,  UITextFieldDelegate{
     
     @IBOutlet var celciusLabel: UILabel!
     @IBOutlet var textField: UITextField!
