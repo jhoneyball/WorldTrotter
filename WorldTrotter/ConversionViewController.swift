@@ -14,19 +14,27 @@ class conversionViewController: UIViewController {
     @IBOutlet var celciusLabel: UILabel!
     @IBOutlet var textField: UITextField!
 
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    } ()
+    
     override func viewDidLoad() {
     super.viewDidLoad()
         updateCelciusValue()
     }
     
-    var fahrenheitValue: Measurement<UnitTemperature>? {
+    var fahrenheitValue: Double? {
         didSet {
             updateCelciusValue()
         }
     }
-    var celciusValue: Measurement<UnitTemperature>? {
+    var celciusValue: Double? {
         if let fahrenheitValue = fahrenheitValue {
-            return fahrenheitValue.converted(to: .celsius)
+            return (fahrenheitValue - 32) * (5/9)
         } else {
             return nil
         }
@@ -39,7 +47,7 @@ class conversionViewController: UIViewController {
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
         
         if let text = textField.text, let value = Double(text) {
-            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+            fahrenheitValue = value
         } else {
             fahrenheitValue = nil
         }
@@ -47,7 +55,7 @@ class conversionViewController: UIViewController {
     
     func updateCelciusValue() {
         if let celciusValue = celciusValue {
-            celciusLabel.text = "\(celciusValue.value)"
+            celciusLabel.text = numberFormatter.string(from: NSNumber(value: celciusValue))
         } else {
             celciusLabel.text = "???"
         }
