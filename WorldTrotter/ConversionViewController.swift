@@ -8,7 +8,6 @@
 
 import UIKit
 
-@available(iOS 10.0, *)
 class conversionViewController: UIViewController {
     
     @IBOutlet var celciusLabel: UILabel!
