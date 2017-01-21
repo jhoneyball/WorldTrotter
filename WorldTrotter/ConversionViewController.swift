@@ -59,6 +59,24 @@ class conversionViewController: UIViewController,  UITextFieldDelegate{
             celciusLabel.text = "???"
         }
     }
-    
+
+    func textField(_ textField: UITextField,
+                      shouldChangeCharactersIn range: NSRange,
+                      replacementString string: String) -> Bool {
+        
+        let existingTextHasDecimalSeperator = textField.text?.range(of:  ".")
+        let replacementTextHasDecimalSeperator = string.range(of:  ".")
+
+        let setOfLetterCharacters = NSCharacterSet.letters
+        let replacementTextHasCharacters = string.rangeOfCharacter(from: setOfLetterCharacters)
+        
+
+        if (replacementTextHasCharacters != nil) ||
+            (existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil) {
+            return false
+        } else {
+            return true
+        }
+    }
 }
 
