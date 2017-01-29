@@ -20,9 +20,26 @@ class conversionViewController: UIViewController,  UITextFieldDelegate{
         nf.maximumFractionDigits = 1
         return nf
     } ()
+
+    override func viewWillAppear(_ animated: Bool) {
+        view.backgroundColor = randomSolidColour()
+    }
     
+    private func randomSolidColour() -> UIColor {
+        let maxResultOfarc4Random = CGFloat (UINT32_MAX)
+        
+        func randomCGFloat() -> CGFloat {return CGFloat(arc4random())/maxResultOfarc4Random }
+        
+        let colour = UIColor (red: randomCGFloat(),
+                              green: randomCGFloat(),
+                              blue: randomCGFloat(),
+                              alpha: 1.0)
+        return colour
+    }
+        
     override func viewDidLoad() {
-    super.viewDidLoad()
+        super.viewDidLoad()
+        print ("ConversionViewController loaded it's view.")
         updateCelciusValue()
     }
     
