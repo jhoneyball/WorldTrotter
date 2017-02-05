@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0DB7A10B1E3AA07F00F4F1F4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB7A10A1E3AA07F00F4F1F4 /* MapKit.framework */; };
 		0DB7A10D1E3CDE9B00F4F1F4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7A10C1E3CDE9B00F4F1F4 /* MapViewController.swift */; };
+		0DB7A10F1E47C84800F4F1F4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7A10E1E47C84800F4F1F4 /* WebViewController.swift */; };
 		0DCBE01D1E2A51F800AF70AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCBE01C1E2A51F800AF70AA /* AppDelegate.swift */; };
 		0DCBE0221E2A51F800AF70AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCBE0201E2A51F800AF70AA /* Main.storyboard */; };
 		0DCBE0241E2A51F800AF70AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DCBE0231E2A51F800AF70AA /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		0DB7A10A1E3AA07F00F4F1F4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0DB7A10C1E3CDE9B00F4F1F4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0DB7A10E1E47C84800F4F1F4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0DCBE0191E2A51F800AF70AA /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCBE01C1E2A51F800AF70AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DCBE0211E2A51F800AF70AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				0DCBE0251E2A51F800AF70AA /* LaunchScreen.storyboard */,
 				0DCBE0281E2A51F800AF70AA /* Info.plist */,
 				0DB7A10C1E3CDE9B00F4F1F4 /* MapViewController.swift */,
+				0DB7A10E1E47C84800F4F1F4 /* WebViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				0DCBE04B1E2BE41900AF70AA /* ConversionViewController.swift in Sources */,
 				0DB7A10D1E3CDE9B00F4F1F4 /* MapViewController.swift in Sources */,
 				0DCBE01D1E2A51F800AF70AA /* AppDelegate.swift in Sources */,
+				0DB7A10F1E47C84800F4F1F4 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,8 +440,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.WorldTrotterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "59e7ee7a-55b2-439b-8f72-a64212826c56";
-				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterProfile;
+				PROVISIONING_PROFILE = "7f72bcea-0030-479c-b4cd-deff0b0aeea4";
+				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterDevelop;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -446,15 +450,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = EF4UQ57PCN;
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.WorldTrotterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "59e7ee7a-55b2-439b-8f72-a64212826c56";
-				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterProfile;
+				PROVISIONING_PROFILE = "2dbafffe-996f-4829-abf1-24ec4b4b732d";
+				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterAdHocDistribution;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
