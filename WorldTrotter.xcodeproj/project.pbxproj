@@ -440,8 +440,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.WorldTrotterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "933e0c7e-d3e4-4098-a779-065d6196a52e";
-				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterDevelopment;
+				PROVISIONING_PROFILE = "df1e5679-7780-4101-b383-51fcedcab841";
+				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterDevProf;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -457,8 +457,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.WorldTrotterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "933e0c7e-d3e4-4098-a779-065d6196a52e";
-				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterDevelopment;
+				PROVISIONING_PROFILE = "df1e5679-7780-4101-b383-51fcedcab841";
+				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterDevProf;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
