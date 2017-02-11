@@ -20,14 +20,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     var mapView: MKMapView!
     let manager = CLLocationManager()
-    
+
+    func buttonAction(sender: UIButton!) {
+        let btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1 {
+            //do anything here
+        }
+    }
+
     override func loadView() {
         mapView = MKMapView()
         manager.delegate = self
         
         view = mapView
-        
-        
         
         let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
@@ -38,18 +43,65 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(segmentedControl)
+
+
+
+        let zoomButton: UIButton = UIButton(type: UIButtonType.contactAdd)
+//        zoomButton.backgroundColor = UIColor.green
+//        zoomButton.setTitle("Click Me", for: .normal)
+        zoomButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        zoomButton.tag = 1
+        zoomButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let topConstraint = segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8)
+        view.addSubview(zoomButton)
+
         
+
+        
+        
+
         let margins = view.layoutMarginsGuide
         
-        let leadingConstraint = segmentedControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
-        let trailingConstraint = segmentedControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+        let scTopConstraint = segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8)
+        let scLeadingConstraint = segmentedControl.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
+        let scTrailingConstraint = segmentedControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+        scTopConstraint.isActive = true
+        scLeadingConstraint.isActive = true
+        scTrailingConstraint.isActive = true
 
-        topConstraint.isActive = true
-        leadingConstraint.isActive = true
-        trailingConstraint.isActive = true
 
+        
+        let zbBottomConstraint = zoomButton.bottomAnchor.constraint(equalTo: bottomLayoutGuide.bottomAnchor, constant: -100.0)
+        let zbTrailingConstraint = zoomButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+
+        zbBottomConstraint.isActive = true
+        zbTrailingConstraint.isActive = true
+
+//         self.view.addConstraint(NSLayoutConstraint(item: zoomButton,
+//                                                    attribute: NSLayoutAttribute.leading,
+//                                                   relatedBy: NSLayoutRelation.equal,
+//                                                    toItem: self.view,
+//                                                    attribute: NSLayoutAttribute.leading,
+//                                                    multiplier: 1.0,
+//                                                    constant: 0.0))
+        
+//        self.view.addConstraint(NSLayoutConstraint(item: zoomButton,
+//                                                   attribute: NSLayoutAttribute.trailing,
+//                                                   relatedBy: NSLayoutRelation.equal,
+//                                                   toItem: self,
+//                                                   attribute: NSLayoutAttribute.trailing,
+//                                                   multiplier: 1.0,
+//                                                   constant: 0.0))
+//
+//        self.view.addConstraint(NSLayoutConstraint(item: zoomButton,
+ //                                                  attribute: NSLayoutAttribute.bottom,
+//                                                   relatedBy: NSLayoutRelation.equal,
+//                                                   toItem: self.view,
+//                                                   attribute: NSLayoutAttribute.bottom,
+//                                                   multiplier: 1.0,
+//                                                   constant: 0.0))
+        
+        
         if CLLocationManager.authorizationStatus() == .notDetermined {
             manager.requestWhenInUseAuthorization()
         }

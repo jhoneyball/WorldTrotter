@@ -440,8 +440,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.WorldTrotterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "df1e5679-7780-4101-b383-51fcedcab841";
-				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterDevProf;
+				PROVISIONING_PROFILE = "6edfd282-7dbe-4e52-9ef3-bce567688d22";
+				PROVISIONING_PROFILE_SPECIFIER = "James Honeyball Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -450,15 +450,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = EF4UQ57PCN;
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.WorldTrotterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "df1e5679-7780-4101-b383-51fcedcab841";
-				PROVISIONING_PROFILE_SPECIFIER = WorldTrotterDevProf;
+				PROVISIONING_PROFILE = "afd471f1-90e0-47b2-824f-6963b9fc3815";
+				PROVISIONING_PROFILE_SPECIFIER = "James Honeyball Ad-Hoc Distribution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
