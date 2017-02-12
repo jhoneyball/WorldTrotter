@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3101B51E50F15B00B97E89 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D3101B71E50F15B00B97E89 /* Localizable.strings */; };
 		0DB7A10B1E3AA07F00F4F1F4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB7A10A1E3AA07F00F4F1F4 /* MapKit.framework */; };
 		0DB7A10D1E3CDE9B00F4F1F4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7A10C1E3CDE9B00F4F1F4 /* MapViewController.swift */; };
 		0DB7A10F1E47C84800F4F1F4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7A10E1E47C84800F4F1F4 /* WebViewController.swift */; };
@@ -37,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D3101B11E50E5FF00B97E89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		0D3101B21E50E68000B97E89 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		0D3101B61E50F15B00B97E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0D3101B81E50F16500B97E89 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0DB7A10A1E3AA07F00F4F1F4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0DB7A10C1E3CDE9B00F4F1F4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0DB7A10E1E47C84800F4F1F4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +126,7 @@
 				0DCBE0281E2A51F800AF70AA /* Info.plist */,
 				0DB7A10C1E3CDE9B00F4F1F4 /* MapViewController.swift */,
 				0DB7A10E1E47C84800F4F1F4 /* WebViewController.swift */,
+				0D3101B71E50F15B00B97E89 /* Localizable.strings */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 0DCBE0101E2A51F800AF70AA;
 			productRefGroup = 0DCBE01A1E2A51F800AF70AA /* Products */;
@@ -252,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DCBE0271E2A51F800AF70AA /* LaunchScreen.storyboard in Resources */,
+				0D3101B51E50F15B00B97E89 /* Localizable.strings in Resources */,
 				0DCBE0241E2A51F800AF70AA /* Assets.xcassets in Resources */,
 				0DCBE0221E2A51F800AF70AA /* Main.storyboard in Resources */,
 			);
@@ -317,10 +325,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0D3101B71E50F15B00B97E89 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D3101B61E50F15B00B97E89 /* Base */,
+				0D3101B81E50F16500B97E89 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		0DCBE0201E2A51F800AF70AA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0DCBE0211E2A51F800AF70AA /* Base */,
+				0D3101B11E50E5FF00B97E89 /* en */,
+				0D3101B21E50E68000B97E89 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -340,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -390,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
