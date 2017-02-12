@@ -24,7 +24,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func buttonAction(sender: UIButton!) {
         let btnsendtag: UIButton = sender
         if btnsendtag.tag == 1 {
-            //do anything here
+            mapView.setUserTrackingMode(.follow, animated: true)
         }
     }
 
